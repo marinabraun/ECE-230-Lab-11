@@ -28,10 +28,11 @@ For the ripple counter after the first press everything goes to 1s because the c
 ### 3 - What width of ring counter would you use to get to an output of ~1KHz?
 Our board has a 100 MHz starting clock, to get to 1KHz using ripple counters (which divides a clock by 2^N where N is the number of T flipflops) we can just solve for it:
 
+```txt
 100,000,000 / 2^N = 1,000
 100,000,000 / 1,000 = 2^N
 100,000 = 2^N
 lg(100,000) = N
 approx 16.6 = N
-
+```
 However we cant have 0.6 of a T flipflop so we would either have 16 or 17 of them depending if we wanted to be over or under 1KHz. 16 would give us 1526 Hz and 17 would give 763 Hz.
