@@ -1,5 +1,5 @@
 module jk_flip_flop (
-    input J, K, clock,
+    input J, K, clock, reset
     output Q,
     output NotQ
 );  
@@ -13,6 +13,7 @@ module jk_flip_flop (
     d_flip_flop dff (
         .D(D),
         .clock(clock),
+        .reset(reset),
         .Q(Q),
         .NotQ(NotQ)
     );
