@@ -1,5 +1,5 @@
 module t_flip_flop (
-    input T, clock,
+    input T, clock, reset,
     output Q,
     output NotQ
 );
@@ -12,6 +12,7 @@ module t_flip_flop (
         .J(T),
         .K(T),
         .clock(clock),
+        .reset(reset),
         .Q(Q),
         .NotQ(NotQ)
      );
