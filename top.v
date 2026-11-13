@@ -13,7 +13,8 @@ module top(
   modulo_counter(
     .clock(btnC),
     .reset(btnU),
-    .count(led[6:3])
+    .count(led[5:3]),
+    .out(led[6])
   );
 
 endmodule
