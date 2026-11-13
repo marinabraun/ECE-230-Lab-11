@@ -39,4 +39,12 @@ assign next_count[0] = sum[0] & ~match;
 assign next_count[1] = sum[1] & ~match;
 assign next_count[2] = sum[2] & ~match;
 
+d_flip_flop d0 (
+  .D(next_count[0]),
+  .clock(clock),
+  .reset(reset),
+  .Q(count[0]),
+  .NotQ()
+);
+
 endmodule
