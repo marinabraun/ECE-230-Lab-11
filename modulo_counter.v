@@ -34,4 +34,9 @@ full_adder f2 (
 wire match;
 assign match = count[2] & ~count[1] & count[0];
 
+wire [2:0] next_count;
+assign next_count[0] = sum[0] & ~match;
+assign next_count[1] = sum[1] & ~match;
+assign next_count[2] = sum[2] & ~match;
+
 endmodule
