@@ -1,5 +1,5 @@
 module jk_flip_flop (
-    input J, K, clock, reset
+    input J, K, clock, reset,
     output Q,
     output NotQ
 );  
