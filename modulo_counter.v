@@ -39,4 +39,39 @@ assign next_count[0] = sum[0] & ~match;
 assign next_count[1] = sum[1] & ~match;
 assign next_count[2] = sum[2] & ~match;
 
+d_flip_flop d0 (
+  .D(next_count[0]),
+  .clock(clock),
+  .reset(reset),
+  .Q(count[0]),
+  .NotQ()
+);
+
+d_flip_flop d1 (
+  .D(next_count[1]),
+  .clock(clock),
+  .reset(reset),
+  .Q(count[1]),
+  .NotQ()
+);
+
+d_flip_flop d2 (
+  .D(next_count[2]),
+  .clock(clock),
+  .reset(reset),
+  .Q(count[2]),
+  .NotQ()
+);
+
+wire next_out;
+assign next_out = out ^ match;
+
+d_flip_flop d_out (
+  .D(next_out),
+  .clock(clock),
+  .reset(reset),
+  .Q(out),
+  .NotQ()
+);
+
 endmodule
