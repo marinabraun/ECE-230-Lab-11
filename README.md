@@ -15,6 +15,7 @@ In this lab, we learned how to make clock dividers from two types of counters.
 Group 9: Marina and Evan
 
 ## Summary
+In this lab we learned how to do frequency dividers, using two types of counters. During the lab we ran into an issue with our ripple_counter because we forgot to wire the last stage and because of that led 2 wasn’t lighting up.
 
 ## Lab Questions
 
