@@ -1,4 +1,4 @@
-module module_counter(
+module modulo_counter(
   input clock, reset,
   output [2:0] count, 
   output out
