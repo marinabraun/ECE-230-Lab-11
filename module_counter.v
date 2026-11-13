@@ -1,4 +1,4 @@
-module modulo_counter(
+module module_counter(
   input clock, reset,
   output [2:0] count, 
   output out
@@ -30,5 +30,8 @@ full_adder f2 (
   .Y(sum[2]),
   .Cout(carry[2])
 );
+
+wire match;
+assign match = count[2] & ~count[1] & count[0];
 
 endmodule
